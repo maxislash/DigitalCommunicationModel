@@ -1,0 +1,2 @@
+# Example of a `.gitattributes` file which reclassifies `.m` files as Matlab:
+*.m linguist-language=Matlab
