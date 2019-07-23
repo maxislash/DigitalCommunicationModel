@@ -1,1 +1,3 @@
 Lessons: 
+
+- good website which explains pulse shaping: https://wirelesspi.com/pulse-shaping-filter/
