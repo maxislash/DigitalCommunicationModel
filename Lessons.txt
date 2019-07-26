@@ -16,6 +16,7 @@ For the things I don't want to forget, here they are:
 	- FIR filter: y(n) = sum [ h(k) x(n-k) ]
 	                     k=0
 	- order of FIR: M ~= Attenuation / (22 * (Fstop - Fpass) / Fs)
+	- good website which explains pulse shaping: https://wirelesspi.com/pulse-shaping-filter/
 
 
 Blocks in digital communication system:
