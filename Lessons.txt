@@ -1,1 +1,31 @@
 Lessons: 
+
+I learned many things from this project, way more than when I started it a few years ago. First of all, it was definitely a good refresher of signal processing and the math behind it. Specially, the way filter works and how it implement it in hardware (or in this case in simulation).
+
+For the things I don't want to forget, here they are:
+	- Sampling frequency: Fs
+			-> and so the Nyquist frequency is Fs/2
+				This is the maximal frequency the signal can be at before being distorted by replicas of itself in the frequency domain
+	- Carrier frequency: Fc
+	- Message frequency: Fm
+				This will depend of the symbol rate and how many bits the system sends per second
+	- Demodulated signal frequency component: Fm + (2Fc - Fm) + (2Fc + Fm)
+				Signal need to go through a low pass filter to remove the carrier frequency components
+	- Cutoff frequency between Fm and 2Fc - Fm
+	                     M-1
+	- FIR filter: y(n) = sum [ h(k) x(n-k) ]
+	                     k=0
+	- order of FIR: M ~= Attenuation / (22 * (Fstop - Fpass) / Fs)
+
+
+Blocks in digital communication system:
+
+bitstream -> QAM mapper -> Upsampling -> Pulse shaping -> Modulation ---------------------------------
+																		  							  |
+																									Noise
+																		  							  |		Channel
+																									Delay
+																		  							  |
+bitstream <- QAM demapper <- Downsampling <- Matched filter	<- Low Pass filter <- Demodulation	------
+								  |													   |
+						Symbol timing recovery								Frequency and phase recovery

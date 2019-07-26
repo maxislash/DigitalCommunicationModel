@@ -1,6 +1,7 @@
 To Do list:
 
-	- Recover frequency, phase and symbol timing
-	- add more interference to the channel
+	- symbol timing recovery
+	- phase recovery
+	- frequency recovery
 	- source and channel encoder
 	- higher QAM (16 - 64 - etc)
